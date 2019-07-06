@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilesystemViewController">
+            <connections>
+                <outlet property="searchPickerView" destination="9KD-J5-85O" id="Bfb-vg-srf"/>
+                <outlet property="tableView" destination="dxJ-Pe-Cfb" id="jcR-Jr-xaK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dxJ-Pe-Cfb">
+                    <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9KD-J5-85O">
+                    <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="bDn-dH-hFR"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9KD-J5-85O" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Nbf-AV-Bvw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dxJ-Pe-Cfb" secondAttribute="bottom" id="SGE-gB-8ts"/>
+                <constraint firstItem="dxJ-Pe-Cfb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WZv-jR-R57"/>
+                <constraint firstItem="dxJ-Pe-Cfb" firstAttribute="top" secondItem="9KD-J5-85O" secondAttribute="bottom" constant="8" id="c6y-JX-FOI"/>
+                <constraint firstItem="9KD-J5-85O" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="eVu-Zt-RAH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dxJ-Pe-Cfb" secondAttribute="trailing" id="q3t-LI-f24"/>
+                <constraint firstItem="9KD-J5-85O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="v6B-Ab-6lF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

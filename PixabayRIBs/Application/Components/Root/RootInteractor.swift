@@ -9,6 +9,7 @@ import RxSwift
 protocol RootRouting: ViewableRouting {
     func routeToNetwork()
     func routeToMemory()
+    func routeToFilesytem()
 
     func dismiss(_ router: ViewableRouting?)
 }
@@ -44,6 +45,10 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         self.router?.dismiss(router)
     }
 
+    func dismiss(_ router: FilesystemRouting?) {
+        self.router?.dismiss(router)
+    }
+
 }
 
 extension RootInteractor: RootPresentableListener {
@@ -57,7 +62,7 @@ extension RootInteractor: RootPresentableListener {
     }
 
     func presentFilesystemViewController() {
-
+        router?.routeToFilesytem()
     }
 
 }

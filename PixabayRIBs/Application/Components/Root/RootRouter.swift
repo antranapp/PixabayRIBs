@@ -4,7 +4,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, NetworkListener, MemoryListener {
+protocol RootInteractable: Interactable, NetworkListener, MemoryListener, FilesystemListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -21,14 +21,17 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 
     private var networkBuilder: NetworkBuildable
     private var memoryBuilder: MemoryBuildable
+    private var filesystemBuilder: FilesystemBuildable
 
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
          networkBuilder: NetworkBuildable,
-         memoryBuilder: MemoryBuildable) {
+         memoryBuilder: MemoryBuildable,
+         filesystemBuilder: FilesystemBuilder) {
 
         self.networkBuilder = networkBuilder
         self.memoryBuilder = memoryBuilder
+        self.filesystemBuilder = filesystemBuilder
 
         super.init(interactor: interactor, viewController: viewController)
 
@@ -59,5 +62,8 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     }
 
     func routeToFilesytem() {
+        let filesystemRouting = filesystemBuilder.build(withListener: interactor)
+        attachChild(filesystemRouting)
+        viewController.present(filesystemRouting.viewControllable)
     }
 }

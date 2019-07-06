@@ -49,6 +49,13 @@
 		F6451B5822D0E4390091E147 /* MemoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B5322D0E4390091E147 /* MemoryViewController.xib */; };
 		F6451B5A22D0E6B80091E147 /* MemoryComponent+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5922D0E6B80091E147 /* MemoryComponent+Detail.swift */; };
 		F6451B5C22D0E9A30091E147 /* RootComponent+Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */; };
+		F6451B6222D13A6A0091E147 /* FilesystemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5D22D13A6A0091E147 /* FilesystemRouter.swift */; };
+		F6451B6322D13A6A0091E147 /* FilesystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5E22D13A6A0091E147 /* FilesystemViewController.swift */; };
+		F6451B6422D13A6A0091E147 /* FilesystemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5F22D13A6A0091E147 /* FilesystemBuilder.swift */; };
+		F6451B6522D13A6A0091E147 /* FilesystemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6022D13A6A0091E147 /* FilesystemInteractor.swift */; };
+		F6451B6622D13A6A0091E147 /* FilesystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B6122D13A6A0091E147 /* FilesystemViewController.xib */; };
+		F6451B6822D13B2E0091E147 /* FilesystemComponent+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6722D13B2E0091E147 /* FilesystemComponent+Detail.swift */; };
+		F6451B6A22D13F4A0091E147 /* RootComponent+Filesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6922D13F4A0091E147 /* RootComponent+Filesystem.swift */; };
 		F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC4622CE3C5200CE3996 /* AppDelegate.swift */; };
 		F689EC4E22CE3C5200CE3996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4D22CE3C5200CE3996 /* Assets.xcassets */; };
 		F689EC5122CE3C5200CE3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4F22CE3C5200CE3996 /* LaunchScreen.storyboard */; };
@@ -117,6 +124,13 @@
 		F6451B5322D0E4390091E147 /* MemoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryViewController.xib; sourceTree = "<group>"; };
 		F6451B5922D0E6B80091E147 /* MemoryComponent+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryComponent+Detail.swift"; sourceTree = "<group>"; };
 		F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Memory.swift"; sourceTree = "<group>"; };
+		F6451B5D22D13A6A0091E147 /* FilesystemRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemRouter.swift; sourceTree = "<group>"; };
+		F6451B5E22D13A6A0091E147 /* FilesystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemViewController.swift; sourceTree = "<group>"; };
+		F6451B5F22D13A6A0091E147 /* FilesystemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemBuilder.swift; sourceTree = "<group>"; };
+		F6451B6022D13A6A0091E147 /* FilesystemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemInteractor.swift; sourceTree = "<group>"; };
+		F6451B6122D13A6A0091E147 /* FilesystemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilesystemViewController.xib; sourceTree = "<group>"; };
+		F6451B6722D13B2E0091E147 /* FilesystemComponent+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilesystemComponent+Detail.swift"; sourceTree = "<group>"; };
+		F6451B6922D13F4A0091E147 /* RootComponent+Filesystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Filesystem.swift"; sourceTree = "<group>"; };
 		F689EC4322CE3C5200CE3996 /* PixabayRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F689EC4622CE3C5200CE3996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F689EC4D22CE3C5200CE3996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +274,7 @@
 				F6451B1722CF7CCB0091E147 /* RootBuilder.swift */,
 				F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */,
 				F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */,
+				F6451B6922D13F4A0091E147 /* RootComponent+Filesystem.swift */,
 				F6451B1822CF7CCB0091E147 /* RootInteractor.swift */,
 				F6451B1522CF7CCB0091E147 /* RootRouter.swift */,
 				F6451B1622CF7CCB0091E147 /* RootViewController.swift */,
@@ -297,6 +312,12 @@
 		F6451B2122CF86F90091E147 /* FilesystemList */ = {
 			isa = PBXGroup;
 			children = (
+				F6451B5F22D13A6A0091E147 /* FilesystemBuilder.swift */,
+				F6451B6722D13B2E0091E147 /* FilesystemComponent+Detail.swift */,
+				F6451B6022D13A6A0091E147 /* FilesystemInteractor.swift */,
+				F6451B5D22D13A6A0091E147 /* FilesystemRouter.swift */,
+				F6451B5E22D13A6A0091E147 /* FilesystemViewController.swift */,
+				F6451B6122D13A6A0091E147 /* FilesystemViewController.xib */,
 			);
 			path = FilesystemList;
 			sourceTree = "<group>";
@@ -530,6 +551,7 @@
 				F6451B1E22CF7CCB0091E147 /* RootViewController.xib in Resources */,
 				F6451B2B22CF8CFA0091E147 /* NetworkViewController.xib in Resources */,
 				F6451B4B22D0C89C0091E147 /* DetailViewController.xib in Resources */,
+				F6451B6622D13A6A0091E147 /* FilesystemViewController.xib in Resources */,
 				F6451B0422CF7B6D0091E147 /* flower.json in Resources */,
 				F6451B2E22CF8D1D0091E147 /* ImageListTableViewCell.xib in Resources */,
 				F6451B0522CF7B6D0091E147 /* car.json in Resources */,
@@ -604,7 +626,10 @@
 				F6451B4722D0C89C0091E147 /* DetailRouter.swift in Sources */,
 				F6451B2822CF8CFA0091E147 /* NetworkViewController.swift in Sources */,
 				F6451B1D22CF7CCB0091E147 /* RootInteractor.swift in Sources */,
+				F6451B6222D13A6A0091E147 /* FilesystemRouter.swift in Sources */,
+				F6451B6A22D13F4A0091E147 /* RootComponent+Filesystem.swift in Sources */,
 				F6451B5422D0E4390091E147 /* MemoryRouter.swift in Sources */,
+				F6451B6522D13A6A0091E147 /* FilesystemInteractor.swift in Sources */,
 				F6451ADD22CF33480091E147 /* ServiceProtocol.swift in Sources */,
 				F6451B5522D0E4390091E147 /* MemoryViewController.swift in Sources */,
 				F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */,
@@ -615,10 +640,13 @@
 				F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */,
 				F6451B2722CF8CFA0091E147 /* NetworkRouter.swift in Sources */,
 				F6451B5722D0E4390091E147 /* MemoryInteractor.swift in Sources */,
+				F6451B6822D13B2E0091E147 /* FilesystemComponent+Detail.swift in Sources */,
 				F6451B5C22D0E9A30091E147 /* RootComponent+Memory.swift in Sources */,
 				F6451B2922CF8CFA0091E147 /* NetworkBuilder.swift in Sources */,
+				F6451B6322D13A6A0091E147 /* FilesystemViewController.swift in Sources */,
 				F6451B5A22D0E6B80091E147 /* MemoryComponent+Detail.swift in Sources */,
 				F6451B4822D0C89C0091E147 /* DetailViewController.swift in Sources */,
+				F6451B6422D13A6A0091E147 /* FilesystemBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
