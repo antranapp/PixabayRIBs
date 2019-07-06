@@ -19,8 +19,8 @@ final class NetworkRouter: ViewableRouter<NetworkInteractable, NetworkViewContro
     private var detailBuilder: DetailBuildable
 
     init(interactor: NetworkInteractable,
-                  viewController: NetworkViewControllable,
-                  detailBuilder: DetailBuildable) {
+          viewController: NetworkViewControllable,
+          detailBuilder: DetailBuildable) {
 
         self.detailBuilder = detailBuilder
 
@@ -33,5 +33,4 @@ final class NetworkRouter: ViewableRouter<NetworkInteractable, NetworkViewContro
         attachChild(detailRouting)
         viewController.present(view: detailRouting.viewControllable)
     }
-
 }

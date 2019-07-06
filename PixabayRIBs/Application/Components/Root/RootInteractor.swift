@@ -8,6 +8,8 @@ import RxSwift
 /// Declare methods the interactor can invoke to manage sub-tree via the router.
 protocol RootRouting: ViewableRouting {
     func routeToNetwork()
+
+    func dismiss(_ router: ViewableRouting?)
 }
 
 /// Declare methods the interactor can invoke the presenter to present data.
@@ -31,6 +33,10 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override init(presenter: RootPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
+    }
+
+    func dismiss(_ router: NetworkRouting?) {
+        self.router?.dismiss(router)
     }
 }
 

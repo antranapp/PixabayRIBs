@@ -15,9 +15,19 @@ protocol DetailPresentableListener: class {
 
 final class DetailViewController: UIViewController, DetailPresentable, DetailViewControllable {
 
+    // MARK: Properties
+
     weak var listener: DetailPresentableListener?
     
     @IBOutlet weak var imageView: UIImageView!
+
+    // MARK: Lifecycles
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = "Detail"
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

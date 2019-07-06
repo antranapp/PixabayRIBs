@@ -8,11 +8,11 @@ import RIBs
 /// created by this RIB.
 protocol NetworkDependency: NetworkDependencyDetail {
     var pixabayService: NetworkPixabayService { get }
+    var parentViewController: RootViewControllable { get }
 }
 
 /// Declare 'fileprivate' dependencies that are only used by this RIB.
 final class NetworkComponent: Component<NetworkDependency> {
-
     var pixabayService: PixaBayService {
         return dependency.pixabayService
     }

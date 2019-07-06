@@ -1,8 +1,4 @@
 //
-//  NetworkComponent+Detail.swift
-//  PixabayRIBs
-//
-//  Created by An Tran on 06.07.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
@@ -14,5 +10,4 @@ protocol NetworkDependencyDetail: Dependency {
 
 /// Implement properties to provide for Detail scope.
 extension NetworkComponent: DetailDependency {
-
 }

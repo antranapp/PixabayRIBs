@@ -10,6 +10,11 @@ protocol RootDependencyNetwork: Dependency {
 
 /// Implement properties to provide for Network scope.
 extension RootComponent: NetworkDependency {
+
+    var parentViewController: RootViewControllable {
+        return rootViewController
+    }
+
     var pixabayService: NetworkPixabayService {
         return NetworkPixabayService()
     }

@@ -1,8 +1,4 @@
 //
-//  DetailRouter.swift
-//  PixabayRIBs
-//
-//  Created by An Tran on 06.07.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
@@ -13,8 +9,8 @@ protocol DetailInteractable: Interactable {
     var listener: DetailListener? { get set }
 }
 
+/// Declare methods the router invokes to manipulate the view hierarchy.
 protocol DetailViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
 final class DetailRouter: ViewableRouter<DetailInteractable, DetailViewControllable>, DetailRouting {

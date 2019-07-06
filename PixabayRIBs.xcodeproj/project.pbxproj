@@ -47,13 +47,6 @@
 		F689EC5122CE3C5200CE3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4F22CE3C5200CE3996 /* LaunchScreen.storyboard */; };
 		F689EC5C22CE3C5300CE3996 /* PixabayRIBsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC5B22CE3C5300CE3996 /* PixabayRIBsTests.swift */; };
 		F689EC6722CE3C5300CE3996 /* PixabayRIBsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC6622CE3C5300CE3996 /* PixabayRIBsUITests.swift */; };
-		F689EC7F22CE3C9E00CE3996 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7822CE3C9E00CE3996 /* TabBarController.swift */; };
-		F689EC8022CE3C9E00CE3996 /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7922CE3C9E00CE3996 /* ViewControllerContext.swift */; };
-		F689EC8122CE3C9E00CE3996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7A22CE3C9E00CE3996 /* ViewController.swift */; };
-		F689EC8222CE3C9E00CE3996 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7B22CE3C9E00CE3996 /* ViewControllerProtocol.swift */; };
-		F689EC8322CE3C9E00CE3996 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7C22CE3C9E00CE3996 /* NavigationController.swift */; };
-		F689EC8422CE3C9E00CE3996 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7D22CE3C9E00CE3996 /* TableViewController.swift */; };
-		F689EC8522CE3C9E00CE3996 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC7E22CE3C9E00CE3996 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,13 +114,6 @@
 		F689EC6222CE3C5300CE3996 /* PixabayRIBsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayRIBsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F689EC6622CE3C5300CE3996 /* PixabayRIBsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayRIBsUITests.swift; sourceTree = "<group>"; };
 		F689EC6822CE3C5300CE3996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F689EC7822CE3C9E00CE3996 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		F689EC7922CE3C9E00CE3996 /* ViewControllerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
-		F689EC7A22CE3C9E00CE3996 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F689EC7B22CE3C9E00CE3996 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
-		F689EC7C22CE3C9E00CE3996 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		F689EC7D22CE3C9E00CE3996 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		F689EC7E22CE3C9E00CE3996 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,27 +280,6 @@
 			path = FilesystemList;
 			sourceTree = "<group>";
 		};
-		F6451B3122CF8D590091E147 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F689EC7C22CE3C9E00CE3996 /* NavigationController.swift */,
-				F689EC7822CE3C9E00CE3996 /* TabBarController.swift */,
-				F689EC7D22CE3C9E00CE3996 /* TableViewController.swift */,
-				F689EC7A22CE3C9E00CE3996 /* ViewController.swift */,
-				F689EC7922CE3C9E00CE3996 /* ViewControllerContext.swift */,
-				F689EC7B22CE3C9E00CE3996 /* ViewControllerProtocol.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F6451B3222CF8D5E0091E147 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F689EC7E22CE3C9E00CE3996 /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		F6451B3322CF8D630091E147 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +299,13 @@
 				F6451B4622D0C89C0091E147 /* DetailViewController.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F6451B4E22D0DC780091E147 /* ActionableItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActionableItem;
 			sourceTree = "<group>";
 		};
 		F689EC3A22CE3C5200CE3996 = {
@@ -413,6 +385,7 @@
 		F689EC7622CE3C7B00CE3996 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F6451B4E22D0DC780091E147 /* ActionableItem */,
 				F689EC7722CE3C8900CE3996 /* UI */,
 			);
 			path = Base;
@@ -421,8 +394,6 @@
 		F689EC7722CE3C8900CE3996 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F6451B3122CF8D590091E147 /* ViewController */,
-				F6451B3222CF8D5E0091E147 /* ViewModel */,
 				F6451B3322CF8D630091E147 /* View */,
 			);
 			path = UI;
@@ -603,24 +574,17 @@
 				F6451B1B22CF7CCB0091E147 /* RootViewController.swift in Sources */,
 				F6451B0722CF7B710091E147 /* MemoryPixabayService.swift in Sources */,
 				F6451AF022CF34940091E147 /* Image.swift in Sources */,
-				F689EC8222CE3C9E00CE3996 /* ViewControllerProtocol.swift in Sources */,
-				F689EC8522CE3C9E00CE3996 /* ViewModel.swift in Sources */,
 				F6451B2A22CF8CFA0091E147 /* NetworkInteractor.swift in Sources */,
 				F6451B1C22CF7CCB0091E147 /* RootBuilder.swift in Sources */,
 				F6451B3522D0B2E70091E147 /* RootComponent+Network.swift in Sources */,
-				F689EC8122CE3C9E00CE3996 /* ViewController.swift in Sources */,
 				F6451AEF22CF34940091E147 /* ImageList.swift in Sources */,
 				F6451B1A22CF7CCB0091E147 /* RootRouter.swift in Sources */,
-				F689EC7F22CE3C9E00CE3996 /* TabBarController.swift in Sources */,
 				F6451B4722D0C89C0091E147 /* DetailRouter.swift in Sources */,
-				F689EC8422CE3C9E00CE3996 /* TableViewController.swift in Sources */,
 				F6451B2822CF8CFA0091E147 /* NetworkViewController.swift in Sources */,
-				F689EC8022CE3C9E00CE3996 /* ViewControllerContext.swift in Sources */,
 				F6451B1D22CF7CCB0091E147 /* RootInteractor.swift in Sources */,
 				F6451ADD22CF33480091E147 /* ServiceProtocol.swift in Sources */,
 				F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */,
 				F6451B4922D0C89C0091E147 /* DetailBuilder.swift in Sources */,
-				F689EC8322CE3C9E00CE3996 /* NavigationController.swift in Sources */,
 				F6451B0B22CF7B7D0091E147 /* FilesystemPixabayService.swift in Sources */,
 				F6451AF322CF77A70091E147 /* AppComponent.swift in Sources */,
 				F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */,

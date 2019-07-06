@@ -12,13 +12,14 @@ protocol NetworkRouting: ViewableRouting {
     func routeToDetail(for image: Image)
 }
 
-// Declare methods the interactor can invoke the presenter to present data.
+/// Declare methods the interactor can invoke the presenter to present data.
 protocol NetworkPresentable: Presentable {
     var listener: NetworkPresentableListener! { get set }
 }
 
+/// Declare methods the interactor can invoke to communicate with other RIBs.
 protocol NetworkListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func dismiss(_ router: NetworkRouting?)
 }
 
 final class NetworkInteractor: PresentableInteractor<NetworkPresentable>, NetworkInteractable, NetworkPresentableListener {
@@ -71,6 +72,10 @@ final class NetworkInteractor: PresentableInteractor<NetworkPresentable>, Networ
 
     func didSelect(_ image: Image) {
         router?.routeToDetail(for: image)
+    }
+
+    func dismiss() {
+        listener?.dismiss(router)
     }
 
     // MARK: Private helpers

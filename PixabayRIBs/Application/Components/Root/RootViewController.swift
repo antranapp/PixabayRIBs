@@ -17,14 +17,15 @@ protocol RootPresentableListener: class {
 
 final class RootViewController: UIViewController, RootPresentable {
 
+    // MARK: Properties
 
     weak var listener: RootPresentableListener?
 
+    // MARK: IBActions
 
     @IBAction func didTapNetworkButton(_ sender: Any) {
         listener?.presentNetworkViewController()
     }
-
 
     @IBAction func didTapMemoryButton(_ sender: Any) {
         listener?.presentMemoryViewController()
@@ -43,4 +44,5 @@ extension RootViewController: RootViewControllable {
         let navigationController = UINavigationController(rootViewController: viewController.uiviewController)
         present(navigationController, animated: true, completion: nil)
     }
+
 }

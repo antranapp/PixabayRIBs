@@ -21,8 +21,6 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 
     private var networkBuilder: NetworkBuildable
 
-    private var currentChild: ViewableRouting?
-
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
          networkBuilder: NetworkBuildable) {
@@ -34,10 +32,18 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         interactor.router = self
     }
 
-    func routeToNetwork() {
-        if let currentChild = self.currentChild {
-            detachChild(currentChild)
+    // MARK: RootRouting
+
+    func dismiss(_ router: ViewableRouting?) {
+        guard let router = router else {
+            return
         }
+
+        router.viewControllable.uiviewController.dismiss(animated: true, completion: nil)
+        detachChild(router)
+    }
+
+    func routeToNetwork() {
         let networkRouting = networkBuilder.build(withListener: interactor)
         attachChild(networkRouting)
         viewController.present(networkRouting.viewControllable)

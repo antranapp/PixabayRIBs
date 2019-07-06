@@ -20,6 +20,8 @@ protocol NetworkPresentableListener: class {
     func fetchImage(with term: String)
 
     func didSelect(_ image: Image)
+
+    func dismiss()
 }
 
 final class NetworkViewController: UIViewController, NetworkPresentable, NetworkViewControllable {
@@ -41,10 +43,6 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
 
     let disposeBag = DisposeBag()
 
-    // MARK: Setup ViewModel
-
-    //lazy var viewModel = ImageListViewModel(service: context.pixelBayService)
-
     // MARK: Lifecyles
 
     override func viewDidLoad() {
@@ -54,8 +52,10 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
         tableView.delegate = self
 
         activityIndicator = UIActivityIndicatorView(style: .gray)
-        let rightButton = UIBarButtonItem(customView: activityIndicator)
-        navigationItem.rightBarButtonItem = rightButton
+        let leftButton = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.leftBarButtonItem = leftButton
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissCurrentView))
 
         // UI Binding
         searchTermTextField.rx.text
@@ -86,6 +86,10 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
 
     func present(view: ViewControllable) {
         navigationController?.pushViewController(view.uiviewController, animated: true)
+    }
+
+    @objc func dismissCurrentView() {
+        listener?.dismiss()
     }
 }
 
