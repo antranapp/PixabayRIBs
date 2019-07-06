@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetworkViewController">
+            <connections>
+                <outlet property="searchTextField" destination="8J1-zi-PiI" id="e7O-Ts-Ldp"/>
+                <outlet property="tableView" destination="idv-US-pod" id="OPr-xU-pwm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8J1-zi-PiI">
+                    <rect key="frame" x="8" y="28" width="359" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="HiU-hy-heT"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="idv-US-pod">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8J1-zi-PiI" secondAttribute="trailing" constant="8" id="2kR-hK-BFE"/>
+                <constraint firstItem="8J1-zi-PiI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="DJ0-hl-2St"/>
+                <constraint firstItem="8J1-zi-PiI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="GRK-6H-Q1B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="idv-US-pod" secondAttribute="bottom" id="UHp-ID-Zbt"/>
+                <constraint firstItem="idv-US-pod" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mXI-30-cs6"/>
+                <constraint firstItem="idv-US-pod" firstAttribute="top" secondItem="8J1-zi-PiI" secondAttribute="bottom" constant="8" id="pLm-ad-N8a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="idv-US-pod" secondAttribute="trailing" id="zk3-GG-ICn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

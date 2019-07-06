@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeX-Lc-pmq">
+                    <rect key="frame" x="158.5" y="248.5" width="58" height="30"/>
+                    <state key="normal" title="Network"/>
+                    <connections>
+                        <action selector="didTapNetworkButton:" destination="-1" eventType="touchUpInside" id="rX5-gW-MoL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciF-tA-Ai1">
+                    <rect key="frame" x="159" y="318.5" width="57" height="30"/>
+                    <state key="normal" title="Memory"/>
+                    <connections>
+                        <action selector="didTapMemoryButton:" destination="-1" eventType="touchUpInside" id="mWF-RS-etL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-xU-BUc">
+                    <rect key="frame" x="151" y="388.5" width="73" height="30"/>
+                    <state key="normal" title="Filesystem"/>
+                    <connections>
+                        <action selector="didTapFilesystemButton:" destination="-1" eventType="touchUpInside" id="fFn-bo-bfJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wbT-xU-BUc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="70" id="03L-QR-1A0"/>
+                <constraint firstItem="zeX-Lc-pmq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1II-1Q-BY4"/>
+                <constraint firstItem="zeX-Lc-pmq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-70" id="Bbu-Wa-Cic"/>
+                <constraint firstItem="ciF-tA-Ai1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="P9e-dw-uxO"/>
+                <constraint firstItem="wbT-xU-BUc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VXZ-3r-JKI"/>
+                <constraint firstItem="ciF-tA-Ai1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aku-K0-eqw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
