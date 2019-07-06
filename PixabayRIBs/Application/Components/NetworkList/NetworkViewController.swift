@@ -18,10 +18,11 @@ protocol NetworkPresentableListener: class {
     var activity: PublishRelay<Bool> { get }
 
     func fetchImage(with term: String)
+
+    func didSelect(_ image: Image)
 }
 
 final class NetworkViewController: UIViewController, NetworkPresentable, NetworkViewControllable {
-
 
     // MARK: Properties
 
@@ -82,6 +83,10 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
 
         title = "List"
     }
+
+    func present(view: ViewControllable) {
+        navigationController?.pushViewController(view.uiviewController, animated: true)
+    }
 }
 
 extension NetworkViewController: UITableViewDataSource {
@@ -113,7 +118,6 @@ extension NetworkViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let imageItem = listener.imageList.value.hits[indexPath.row]
-        //let detailViewController = ImageDetailViewController(context: context, image: imageItem)
-        //navigationController?.pushViewController(detailViewController, animated: true)
+        listener.didSelect(imageItem)
     }
 }

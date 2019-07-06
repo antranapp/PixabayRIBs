@@ -6,7 +6,7 @@ import RIBs
 
 /// Declare the set of dependencies required by this RIB, but cannot be
 /// created by this RIB.
-protocol NetworkDependency: Dependency {
+protocol NetworkDependency: NetworkDependencyDetail {
     var pixabayService: NetworkPixabayService { get }
 }
 
@@ -31,10 +31,14 @@ final class NetworkBuilder: Builder<NetworkDependency>, NetworkBuildable {
     }
 
     func build(withListener listener: NetworkListener) -> NetworkRouting {
-        let _ = NetworkComponent(dependency: dependency)
+        let component = NetworkComponent(dependency: dependency)
         let viewController = NetworkViewController()
         let interactor = NetworkInteractor(presenter: viewController, pixaBayService: dependency.pixabayService)
         interactor.listener = listener
-        return NetworkRouter(interactor: interactor, viewController: viewController)
+
+        // Children
+        let detailBuilder = DetailBuilder(dependency: component)
+
+        return NetworkRouter(interactor: interactor, viewController: viewController, detailBuilder: detailBuilder)
     }
 }

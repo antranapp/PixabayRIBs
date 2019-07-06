@@ -36,6 +36,12 @@
 		F6451B2E22CF8D1D0091E147 /* ImageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B2C22CF8D1D0091E147 /* ImageListTableViewCell.xib */; };
 		F6451B2F22CF8D1D0091E147 /* ImageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B2D22CF8D1D0091E147 /* ImageListTableViewCell.swift */; };
 		F6451B3522D0B2E70091E147 /* RootComponent+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */; };
+		F6451B4722D0C89C0091E147 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4222D0C89C0091E147 /* DetailRouter.swift */; };
+		F6451B4822D0C89C0091E147 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4322D0C89C0091E147 /* DetailViewController.swift */; };
+		F6451B4922D0C89C0091E147 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4422D0C89C0091E147 /* DetailBuilder.swift */; };
+		F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4522D0C89C0091E147 /* DetailInteractor.swift */; };
+		F6451B4B22D0C89C0091E147 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B4622D0C89C0091E147 /* DetailViewController.xib */; };
+		F6451B4D22D0CAB80091E147 /* NetworkComponent+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4C22D0CAB80091E147 /* NetworkComponent+Detail.swift */; };
 		F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC4622CE3C5200CE3996 /* AppDelegate.swift */; };
 		F689EC4E22CE3C5200CE3996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4D22CE3C5200CE3996 /* Assets.xcassets */; };
 		F689EC5122CE3C5200CE3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4F22CE3C5200CE3996 /* LaunchScreen.storyboard */; };
@@ -98,6 +104,12 @@
 		F6451B2C22CF8D1D0091E147 /* ImageListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageListTableViewCell.xib; sourceTree = "<group>"; };
 		F6451B2D22CF8D1D0091E147 /* ImageListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListTableViewCell.swift; sourceTree = "<group>"; };
 		F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Network.swift"; sourceTree = "<group>"; };
+		F6451B4222D0C89C0091E147 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		F6451B4322D0C89C0091E147 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F6451B4422D0C89C0091E147 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		F6451B4522D0C89C0091E147 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		F6451B4622D0C89C0091E147 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F6451B4C22D0CAB80091E147 /* NetworkComponent+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkComponent+Detail.swift"; sourceTree = "<group>"; };
 		F689EC4322CE3C5200CE3996 /* PixabayRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F689EC4622CE3C5200CE3996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F689EC4D22CE3C5200CE3996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,30 +267,31 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		F6451B1F22CF86E20091E147 /* Network */ = {
+		F6451B1F22CF86E20091E147 /* NetworkList */ = {
 			isa = PBXGroup;
 			children = (
 				F6451B2422CF8CFA0091E147 /* NetworkBuilder.swift */,
+				F6451B4C22D0CAB80091E147 /* NetworkComponent+Detail.swift */,
 				F6451B2522CF8CFA0091E147 /* NetworkInteractor.swift */,
 				F6451B2222CF8CFA0091E147 /* NetworkRouter.swift */,
 				F6451B2322CF8CFA0091E147 /* NetworkViewController.swift */,
 				F6451B2622CF8CFA0091E147 /* NetworkViewController.xib */,
 			);
-			path = Network;
+			path = NetworkList;
 			sourceTree = "<group>";
 		};
-		F6451B2022CF86F00091E147 /* Memory */ = {
+		F6451B2022CF86F00091E147 /* MemoryList */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Memory;
+			path = MemoryList;
 			sourceTree = "<group>";
 		};
-		F6451B2122CF86F90091E147 /* Filesystem */ = {
+		F6451B2122CF86F90091E147 /* FilesystemList */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Filesystem;
+			path = FilesystemList;
 			sourceTree = "<group>";
 		};
 		F6451B3122CF8D590091E147 /* ViewController */ = {
@@ -309,6 +322,18 @@
 				F6451B2C22CF8D1D0091E147 /* ImageListTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F6451B4122D0C8880091E147 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F6451B4422D0C89C0091E147 /* DetailBuilder.swift */,
+				F6451B4522D0C89C0091E147 /* DetailInteractor.swift */,
+				F6451B4222D0C89C0091E147 /* DetailRouter.swift */,
+				F6451B4322D0C89C0091E147 /* DetailViewController.swift */,
+				F6451B4622D0C89C0091E147 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		F689EC3A22CE3C5200CE3996 = {
@@ -377,9 +402,10 @@
 			isa = PBXGroup;
 			children = (
 				F6451B0C22CF7C5C0091E147 /* Root */,
-				F6451B1F22CF86E20091E147 /* Network */,
-				F6451B2022CF86F00091E147 /* Memory */,
-				F6451B2122CF86F90091E147 /* Filesystem */,
+				F6451B1F22CF86E20091E147 /* NetworkList */,
+				F6451B2022CF86F00091E147 /* MemoryList */,
+				F6451B2122CF86F90091E147 /* FilesystemList */,
+				F6451B4122D0C8880091E147 /* Detail */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -511,6 +537,7 @@
 				F689EC4E22CE3C5200CE3996 /* Assets.xcassets in Resources */,
 				F6451B1E22CF7CCB0091E147 /* RootViewController.xib in Resources */,
 				F6451B2B22CF8CFA0091E147 /* NetworkViewController.xib in Resources */,
+				F6451B4B22D0C89C0091E147 /* DetailViewController.xib in Resources */,
 				F6451B0422CF7B6D0091E147 /* flower.json in Resources */,
 				F6451B2E22CF8D1D0091E147 /* ImageListTableViewCell.xib in Resources */,
 				F6451B0522CF7B6D0091E147 /* car.json in Resources */,
@@ -572,6 +599,7 @@
 				F6451B0922CF7B780091E147 /* NetworkPixabayService.swift in Sources */,
 				F6451B2F22CF8D1D0091E147 /* ImageListTableViewCell.swift in Sources */,
 				F6451ADE22CF33480091E147 /* PixaBayService.swift in Sources */,
+				F6451B4D22D0CAB80091E147 /* NetworkComponent+Detail.swift in Sources */,
 				F6451B1B22CF7CCB0091E147 /* RootViewController.swift in Sources */,
 				F6451B0722CF7B710091E147 /* MemoryPixabayService.swift in Sources */,
 				F6451AF022CF34940091E147 /* Image.swift in Sources */,
@@ -584,17 +612,21 @@
 				F6451AEF22CF34940091E147 /* ImageList.swift in Sources */,
 				F6451B1A22CF7CCB0091E147 /* RootRouter.swift in Sources */,
 				F689EC7F22CE3C9E00CE3996 /* TabBarController.swift in Sources */,
+				F6451B4722D0C89C0091E147 /* DetailRouter.swift in Sources */,
 				F689EC8422CE3C9E00CE3996 /* TableViewController.swift in Sources */,
 				F6451B2822CF8CFA0091E147 /* NetworkViewController.swift in Sources */,
 				F689EC8022CE3C9E00CE3996 /* ViewControllerContext.swift in Sources */,
 				F6451B1D22CF7CCB0091E147 /* RootInteractor.swift in Sources */,
 				F6451ADD22CF33480091E147 /* ServiceProtocol.swift in Sources */,
+				F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */,
+				F6451B4922D0C89C0091E147 /* DetailBuilder.swift in Sources */,
 				F689EC8322CE3C9E00CE3996 /* NavigationController.swift in Sources */,
 				F6451B0B22CF7B7D0091E147 /* FilesystemPixabayService.swift in Sources */,
 				F6451AF322CF77A70091E147 /* AppComponent.swift in Sources */,
 				F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */,
 				F6451B2722CF8CFA0091E147 /* NetworkRouter.swift in Sources */,
 				F6451B2922CF8CFA0091E147 /* NetworkBuilder.swift in Sources */,
+				F6451B4822D0C89C0091E147 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

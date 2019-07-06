@@ -7,8 +7,9 @@ import RxSwift
 import RxCocoa
 import PromiseKit
 
+/// Declare methods the interactor can invoke to manage sub-tree via the router.
 protocol NetworkRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToDetail(for image: Image)
 }
 
 // Declare methods the interactor can invoke the presenter to present data.
@@ -66,6 +67,10 @@ final class NetworkInteractor: PresentableInteractor<NetworkPresentable>, Networ
             .finally {
                 self.activity.accept(false)
             }
+    }
+
+    func didSelect(_ image: Image) {
+        router?.routeToDetail(for: image)
     }
 
     // MARK: Private helpers

@@ -35,7 +35,6 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         let interactor = RootInteractor(presenter: viewController)
 
         // Children
-
         let networkBuilder = NetworkBuilder(dependency: component)
 
         return RootRouter(interactor: interactor,
