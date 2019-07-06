@@ -4,7 +4,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, NetworkListener {
+protocol RootInteractable: Interactable, NetworkListener, MemoryListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -20,12 +20,15 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     // Paivate
 
     private var networkBuilder: NetworkBuildable
+    private var memoryBuilder: MemoryBuildable
 
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
-         networkBuilder: NetworkBuildable) {
+         networkBuilder: NetworkBuildable,
+         memoryBuilder: MemoryBuildable) {
 
         self.networkBuilder = networkBuilder
+        self.memoryBuilder = memoryBuilder
 
         super.init(interactor: interactor, viewController: viewController)
 
@@ -50,6 +53,9 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     }
 
     func routeToMemory() {
+        let memoryRouting = memoryBuilder.build(withListener: interactor)
+        attachChild(memoryRouting)
+        viewController.present(memoryRouting.viewControllable)
     }
 
     func routeToFilesytem() {

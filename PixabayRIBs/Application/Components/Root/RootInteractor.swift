@@ -8,6 +8,7 @@ import RxSwift
 /// Declare methods the interactor can invoke to manage sub-tree via the router.
 protocol RootRouting: ViewableRouting {
     func routeToNetwork()
+    func routeToMemory()
 
     func dismiss(_ router: ViewableRouting?)
 }
@@ -38,6 +39,11 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     func dismiss(_ router: NetworkRouting?) {
         self.router?.dismiss(router)
     }
+
+    func dismiss(_ router: MemoryRouting?) {
+        self.router?.dismiss(router)
+    }
+
 }
 
 extension RootInteractor: RootPresentableListener {
@@ -47,7 +53,7 @@ extension RootInteractor: RootPresentableListener {
     }
 
     func presentMemoryViewController() {
-
+        router?.routeToMemory()
     }
 
     func presentFilesystemViewController() {

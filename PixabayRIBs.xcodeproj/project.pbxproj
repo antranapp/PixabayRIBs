@@ -42,6 +42,13 @@
 		F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4522D0C89C0091E147 /* DetailInteractor.swift */; };
 		F6451B4B22D0C89C0091E147 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B4622D0C89C0091E147 /* DetailViewController.xib */; };
 		F6451B4D22D0CAB80091E147 /* NetworkComponent+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4C22D0CAB80091E147 /* NetworkComponent+Detail.swift */; };
+		F6451B5422D0E4390091E147 /* MemoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B4F22D0E4390091E147 /* MemoryRouter.swift */; };
+		F6451B5522D0E4390091E147 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5022D0E4390091E147 /* MemoryViewController.swift */; };
+		F6451B5622D0E4390091E147 /* MemoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5122D0E4390091E147 /* MemoryBuilder.swift */; };
+		F6451B5722D0E4390091E147 /* MemoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5222D0E4390091E147 /* MemoryInteractor.swift */; };
+		F6451B5822D0E4390091E147 /* MemoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B5322D0E4390091E147 /* MemoryViewController.xib */; };
+		F6451B5A22D0E6B80091E147 /* MemoryComponent+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5922D0E6B80091E147 /* MemoryComponent+Detail.swift */; };
+		F6451B5C22D0E9A30091E147 /* RootComponent+Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */; };
 		F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC4622CE3C5200CE3996 /* AppDelegate.swift */; };
 		F689EC4E22CE3C5200CE3996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4D22CE3C5200CE3996 /* Assets.xcassets */; };
 		F689EC5122CE3C5200CE3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4F22CE3C5200CE3996 /* LaunchScreen.storyboard */; };
@@ -103,6 +110,13 @@
 		F6451B4522D0C89C0091E147 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		F6451B4622D0C89C0091E147 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F6451B4C22D0CAB80091E147 /* NetworkComponent+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkComponent+Detail.swift"; sourceTree = "<group>"; };
+		F6451B4F22D0E4390091E147 /* MemoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryRouter.swift; sourceTree = "<group>"; };
+		F6451B5022D0E4390091E147 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
+		F6451B5122D0E4390091E147 /* MemoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBuilder.swift; sourceTree = "<group>"; };
+		F6451B5222D0E4390091E147 /* MemoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryInteractor.swift; sourceTree = "<group>"; };
+		F6451B5322D0E4390091E147 /* MemoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryViewController.xib; sourceTree = "<group>"; };
+		F6451B5922D0E6B80091E147 /* MemoryComponent+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryComponent+Detail.swift"; sourceTree = "<group>"; };
+		F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Memory.swift"; sourceTree = "<group>"; };
 		F689EC4322CE3C5200CE3996 /* PixabayRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F689EC4622CE3C5200CE3996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F689EC4D22CE3C5200CE3996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +259,7 @@
 			children = (
 				F6451B1722CF7CCB0091E147 /* RootBuilder.swift */,
 				F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */,
+				F6451B5B22D0E9A30091E147 /* RootComponent+Memory.swift */,
 				F6451B1822CF7CCB0091E147 /* RootInteractor.swift */,
 				F6451B1522CF7CCB0091E147 /* RootRouter.swift */,
 				F6451B1622CF7CCB0091E147 /* RootViewController.swift */,
@@ -269,6 +284,12 @@
 		F6451B2022CF86F00091E147 /* MemoryList */ = {
 			isa = PBXGroup;
 			children = (
+				F6451B5122D0E4390091E147 /* MemoryBuilder.swift */,
+				F6451B5922D0E6B80091E147 /* MemoryComponent+Detail.swift */,
+				F6451B5222D0E4390091E147 /* MemoryInteractor.swift */,
+				F6451B4F22D0E4390091E147 /* MemoryRouter.swift */,
+				F6451B5022D0E4390091E147 /* MemoryViewController.swift */,
+				F6451B5322D0E4390091E147 /* MemoryViewController.xib */,
 			);
 			path = MemoryList;
 			sourceTree = "<group>";
@@ -513,6 +534,7 @@
 				F6451B2E22CF8D1D0091E147 /* ImageListTableViewCell.xib in Resources */,
 				F6451B0522CF7B6D0091E147 /* car.json in Resources */,
 				F6451B0322CF7B6D0091E147 /* sky.json in Resources */,
+				F6451B5822D0E4390091E147 /* MemoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,14 +604,20 @@
 				F6451B4722D0C89C0091E147 /* DetailRouter.swift in Sources */,
 				F6451B2822CF8CFA0091E147 /* NetworkViewController.swift in Sources */,
 				F6451B1D22CF7CCB0091E147 /* RootInteractor.swift in Sources */,
+				F6451B5422D0E4390091E147 /* MemoryRouter.swift in Sources */,
 				F6451ADD22CF33480091E147 /* ServiceProtocol.swift in Sources */,
+				F6451B5522D0E4390091E147 /* MemoryViewController.swift in Sources */,
 				F6451B4A22D0C89C0091E147 /* DetailInteractor.swift in Sources */,
 				F6451B4922D0C89C0091E147 /* DetailBuilder.swift in Sources */,
 				F6451B0B22CF7B7D0091E147 /* FilesystemPixabayService.swift in Sources */,
 				F6451AF322CF77A70091E147 /* AppComponent.swift in Sources */,
+				F6451B5622D0E4390091E147 /* MemoryBuilder.swift in Sources */,
 				F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */,
 				F6451B2722CF8CFA0091E147 /* NetworkRouter.swift in Sources */,
+				F6451B5722D0E4390091E147 /* MemoryInteractor.swift in Sources */,
+				F6451B5C22D0E9A30091E147 /* RootComponent+Memory.swift in Sources */,
 				F6451B2922CF8CFA0091E147 /* NetworkBuilder.swift in Sources */,
+				F6451B5A22D0E6B80091E147 /* MemoryComponent+Detail.swift in Sources */,
 				F6451B4822D0C89C0091E147 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

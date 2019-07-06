@@ -3,16 +3,11 @@
 //
 
 import RIBs
-import RxSwift
 import RxCocoa
+import RxSwift
 import UIKit
-import Kingfisher
 
-/// Declare properties and methods that the view controller can invoke to perform
-/// business logic, such as signIn(). This protocol is implemented by the corresponding
-/// interactor class.
-protocol NetworkPresentableListener: class {
-
+protocol MemoryPresentableListener: class {
     var searchTerm: BehaviorRelay<String> { get }
     var imageList: BehaviorRelay<ImageList> { get }
     var activity: PublishRelay<Bool> { get }
@@ -24,22 +19,20 @@ protocol NetworkPresentableListener: class {
     func dismiss()
 }
 
-final class NetworkViewController: UIViewController, NetworkPresentable, NetworkViewControllable {
+final class MemoryViewController: UIViewController, MemoryPresentable, MemoryViewControllable {
 
     // MARK: Properties
 
     // Public
 
-    var listener: NetworkPresentableListener!
+    weak var listener: MemoryPresentableListener!
 
     // IBOutlets
 
-    @IBOutlet weak var searchTermTextField: UITextField!
+    @IBOutlet weak var searchPickerView: UIPickerView!
     @IBOutlet weak var tableView: UITableView!
 
     // Private
-
-    private var activityIndicator: UIActivityIndicatorView!
 
     let disposeBag = DisposeBag()
 
@@ -51,19 +44,22 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
         tableView.dataSource = self
         tableView.delegate = self
 
-        activityIndicator = UIActivityIndicatorView(style: .gray)
-        let leftButton = UIBarButtonItem(customView: activityIndicator)
-        navigationItem.leftBarButtonItem = leftButton
+        tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
+
+        title = "Memory"
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissCurrentView))
 
-        tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
-
-        title = "List"
+        Observable.just(["car", "sky", "flower"])
+            .bind(to: searchPickerView.rx.itemTitles) { _, item in
+                return "\(item)"
+            }
+            .disposed(by: disposeBag)
 
         // UI Binding
-        searchTermTextField.rx.text
-            .orEmpty
+        searchPickerView.rx
+            .modelSelected(String.self)
+            .map { $0.first! }
             .bind(to: listener.searchTerm)
             .disposed(by: disposeBag)
 
@@ -71,15 +67,6 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
         listener.imageList.subscribe(
             onNext: { imageList in
                 self.tableView.reloadData()
-            }
-        ).disposed(by: disposeBag)
-
-        // Observe Signal
-        listener.activity.subscribe(
-            onNext: { value in
-                DispatchQueue.main.async {
-                    value ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
-                }
             }
         ).disposed(by: disposeBag)
     }
@@ -93,18 +80,18 @@ final class NetworkViewController: UIViewController, NetworkPresentable, Network
     }
 }
 
-extension NetworkViewController: UITableViewDataSource {
+extension MemoryViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listener?.imageList.value.hits.count ?? 0
+        return listener.imageList.value.hits.count
     }
 }
 
-extension NetworkViewController: UITableViewDelegate {
+extension MemoryViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ImageListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageListTableViewCell") as! ImageListTableViewCell

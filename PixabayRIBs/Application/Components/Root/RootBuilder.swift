@@ -36,9 +36,11 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
 
         // Children
         let networkBuilder = NetworkBuilder(dependency: component)
+        let memoryBuilder = MemoryBuilder(dependency: component)
 
         return RootRouter(interactor: interactor,
                           viewController: viewController,
-                          networkBuilder: networkBuilder)
+                          networkBuilder: networkBuilder,
+                          memoryBuilder: memoryBuilder)
     }
 }
