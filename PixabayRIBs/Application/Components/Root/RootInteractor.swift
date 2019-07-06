@@ -5,20 +5,21 @@
 import RIBs
 import RxSwift
 
+/// Declare methods the interactor can invoke to manage sub-tree via the router.
 protocol RootRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToNetwork()
 }
 
+/// Declare methods the interactor can invoke the presenter to present data.
 protocol RootPresentable: Presentable {
     var listener: RootPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
+/// Declare methods the interactor can invoke to communicate with other RIBs.
 protocol RootListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable {
 
     // MARK: Properties
 
@@ -31,4 +32,20 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         super.init(presenter: presenter)
         presenter.listener = self
     }
+}
+
+extension RootInteractor: RootPresentableListener {
+
+    func presentNetworkViewController() {
+        router?.routeToNetwork()
+    }
+
+    func presentMemoryViewController() {
+
+    }
+
+    func presentFilesystemViewController() {
+
+    }
+
 }

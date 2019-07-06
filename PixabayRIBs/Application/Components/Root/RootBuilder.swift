@@ -4,9 +4,7 @@
 
 import RIBs
 
-protocol RootDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+protocol RootDependency: RootDependencyNetwork {
 }
 
 final class RootComponent: Component<RootDependency> {
@@ -34,8 +32,14 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     func build() -> LaunchRouting {
         let viewController = RootViewController()
         let component = RootComponent(dependency: dependency, rootViewController: viewController)
-
         let interactor = RootInteractor(presenter: viewController)
-        return RootRouter(interactor: interactor, viewController: viewController)
+
+        // Children
+
+        let networkBuilder = NetworkBuilder(dependency: component)
+
+        return RootRouter(interactor: interactor,
+                          viewController: viewController,
+                          networkBuilder: networkBuilder)
     }
 }

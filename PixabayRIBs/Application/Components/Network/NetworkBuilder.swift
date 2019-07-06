@@ -27,7 +27,7 @@ final class NetworkBuilder: Builder<NetworkDependency>, NetworkBuildable {
     }
 
     func build(withListener listener: NetworkListener) -> NetworkRouting {
-        let component = NetworkComponent(dependency: dependency)
+        let _ = NetworkComponent(dependency: dependency)
         let viewController = NetworkViewController()
         let interactor = NetworkInteractor(presenter: viewController)
         interactor.listener = listener

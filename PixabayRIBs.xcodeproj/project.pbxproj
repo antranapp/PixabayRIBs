@@ -35,6 +35,7 @@
 		F6451B2B22CF8CFA0091E147 /* NetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B2622CF8CFA0091E147 /* NetworkViewController.xib */; };
 		F6451B2E22CF8D1D0091E147 /* ImageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6451B2C22CF8D1D0091E147 /* ImageListTableViewCell.xib */; };
 		F6451B2F22CF8D1D0091E147 /* ImageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B2D22CF8D1D0091E147 /* ImageListTableViewCell.swift */; };
+		F6451B3522D0B2E70091E147 /* RootComponent+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */; };
 		F689EC4722CE3C5200CE3996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC4622CE3C5200CE3996 /* AppDelegate.swift */; };
 		F689EC4E22CE3C5200CE3996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4D22CE3C5200CE3996 /* Assets.xcassets */; };
 		F689EC5122CE3C5200CE3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F689EC4F22CE3C5200CE3996 /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		F6451B2622CF8CFA0091E147 /* NetworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkViewController.xib; sourceTree = "<group>"; };
 		F6451B2C22CF8D1D0091E147 /* ImageListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageListTableViewCell.xib; sourceTree = "<group>"; };
 		F6451B2D22CF8D1D0091E147 /* ImageListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListTableViewCell.swift; sourceTree = "<group>"; };
+		F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Network.swift"; sourceTree = "<group>"; };
 		F689EC4322CE3C5200CE3996 /* PixabayRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F689EC4622CE3C5200CE3996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F689EC4D22CE3C5200CE3996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F6451B1722CF7CCB0091E147 /* RootBuilder.swift */,
+				F6451B3422D0B2E70091E147 /* RootComponent+Network.swift */,
 				F6451B1822CF7CCB0091E147 /* RootInteractor.swift */,
 				F6451B1522CF7CCB0091E147 /* RootRouter.swift */,
 				F6451B1622CF7CCB0091E147 /* RootViewController.swift */,
@@ -576,6 +579,7 @@
 				F689EC8522CE3C9E00CE3996 /* ViewModel.swift in Sources */,
 				F6451B2A22CF8CFA0091E147 /* NetworkInteractor.swift in Sources */,
 				F6451B1C22CF7CCB0091E147 /* RootBuilder.swift in Sources */,
+				F6451B3522D0B2E70091E147 /* RootComponent+Network.swift in Sources */,
 				F689EC8122CE3C9E00CE3996 /* ViewController.swift in Sources */,
 				F6451AEF22CF34940091E147 /* ImageList.swift in Sources */,
 				F6451B1A22CF7CCB0091E147 /* RootRouter.swift in Sources */,
