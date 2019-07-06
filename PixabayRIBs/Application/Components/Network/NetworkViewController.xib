@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetworkViewController">
             <connections>
-                <outlet property="searchTextField" destination="8J1-zi-PiI" id="e7O-Ts-Ldp"/>
-                <outlet property="tableView" destination="idv-US-pod" id="OPr-xU-pwm"/>
+                <outlet property="searchTermTextField" destination="8J1-zi-PiI" id="2Ny-L4-hOp"/>
+                <outlet property="tableView" destination="idv-US-pod" id="vim-sz-jj9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
             </connections>
         </placeholder>
